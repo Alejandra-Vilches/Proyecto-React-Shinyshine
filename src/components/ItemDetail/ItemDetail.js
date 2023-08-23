@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const ItemDetail = ({id, name, img, category, description, price, stock, quantity}) => {
     return(
@@ -27,7 +28,7 @@ const ItemDetail = ({id, name, img, category, description, price, stock, quantit
                 </p>
             </section>
             <footer className="ItemFooter">
-                <ItemCount initial={1} stock={stock} onAdd={(quantity) = console.log('Cantidad agregada', quantity)}/>
+                <ItemListContainer initial={1} stock={stock} onAdd={(quantity) = console.log('Cantidad agregada', quantity)}/>
             </footer>
         </article>
     )
