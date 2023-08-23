@@ -13,14 +13,12 @@ function App() {
       <BrowserRouter>
        <NavBar/>
        <Routes>
-        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/' element={<ItemListContainerProducts/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainerProducts/>} />
         <Route path='/item/:itemId' element={<ItemDetailContainer/>} />
         <Route path='*' element={<h1>404 NOT FOUND</h1>} />
        </Routes>
-
-       <ItemListContainerProducts/>
-       <ItemDetailContainer/>
+       <ItemListContainer/>
       </BrowserRouter>
     </div>
   );
