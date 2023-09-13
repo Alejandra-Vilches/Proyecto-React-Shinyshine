@@ -5,12 +5,12 @@ const CartItem = ({ item }) => {
   const {deleteItem}= useContext(CartContext)
 
   return (
-    <div className="d-flex flex-column align-items-center">
-      <img src={item.img} alt={item.name} with={'10rem'}/>
-      <p>{item.name}</p>
-      <p>${item.price}</p>
-      <p>{item.quantity}</p>
-      <p>Subtotal : ${item.quantity * item.price} </p>
+    <div className="d-flex flex-row justify-content-center m-5">
+      <img src={item.img} alt={item.name} width={'150rem'}/>
+      <p className="m-5">{item.name}</p>
+      <p className="m-5">${item.price}</p>
+      <p className="m-5">{item.quantity}</p>
+      <p className="m-5">Subtotal : ${item.quantity * item.price} </p>
       <button className="btn btn-danger" onClick={()=>deleteItem(item.id)}> Borrar</button>
     </div>
   )

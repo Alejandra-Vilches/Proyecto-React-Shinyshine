@@ -1,0 +1,26 @@
+.titulo{
+    color:palevioletred; 
+    font-weight: 800;
+}
+
+.titulo:hover {
+    color: black; 
+}
+
+.estilos-categorias{
+    background-color: palevioletred;
+    padding: 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.estilos-nav{
+     color: white;
+     background-color: rgb(223, 62, 116);
+     padding: 18px 15px;
+     border-radius: 10px;
+}
+
+.estilos-nav-normal{
+    color: white;
+}

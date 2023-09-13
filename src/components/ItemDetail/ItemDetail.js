@@ -17,11 +17,11 @@ const ItemDetail = ({id, name, img, description, price, stock}) => {
     }
 
     return(
-        <div className="d-flex flex-column align-items-center">
+        <div>
             <h3>Detalle de: {name}</h3>
             <img src={img} alt={name} className="ItemImg"/>
             <p>{description}</p>
-            <p>{price}</p>
+            <p>${price}</p>
             {quantityAdded === '' ? <ItemCount initial={0} stock={stock} onAdd={onAdd}/>
             : <Link to='/cart' className="btn btn-dark"> Ir al carrito</Link>}
         </div> 

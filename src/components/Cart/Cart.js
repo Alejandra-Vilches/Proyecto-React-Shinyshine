@@ -11,14 +11,14 @@ const Cart = () => {
             {cart.length
             ? <div>
                 {cart.map((item) => <CartItem key={item.id} item={item}/>)}
-                <p>Total a pagar: ${total()}</p>
+                <h3 className="m-3">Total a pagar: ${total()}</h3>
                 <div>
                     <button className="btn btn-danger m-2" onClick={clear}>Vaciar carrito</button>
                     <Link className="btn btn-dark m-2">Terminar compra</Link>
                 </div>
             </div>
             : <div>
-                <h3>Tu carrito está vacio</h3>
+                <h3 className="m-5">Tu carrito está vacio</h3>
                 <Link to = '/' className= 'btn btn-dark'>Ir a comprar</Link>
             </div>}
         </div>
