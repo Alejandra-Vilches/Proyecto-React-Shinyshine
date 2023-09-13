@@ -19,12 +19,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
     return(
         <div className='Counter'>
             <div className='Controls d-flex flex-row justify-content-center'>
-                <button className="btn btn-dark m-2" onClick={decrement}>-</button>
+                <button className="btn btn-secondary m-2" onClick={decrement}>-</button>
                 <h4 className='Number m-2'>{quantity}</h4>
-                <button className="btn btn-dark m-2" onClick={increment}>+</button>
+                <button className="btn btn-secondary m-2" onClick={increment}>+</button>
             </div>
             <div>
-                <button className="btn btn-dark m-2" onClick={() => {
+                <button className="btn btn-secondary m-2" onClick={() => {
             if (stock) {
               onAdd(quantity);
              // window.alert("Producto agregado al carrito");
