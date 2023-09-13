@@ -9,7 +9,7 @@ const CartWidget = () => {
     return(
 
         <div className=''>
-            <img className='CartImg' src={cart} alt="cart-widget" style={{width: '42px', paddingTop: '20px'}}/>
+            <img className='CartImg m-2' src={cart} alt="cart-widget" style={{width: '42px', paddingTop: '20px'}}/>
             {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
         </div>
     )

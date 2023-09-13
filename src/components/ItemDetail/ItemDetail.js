@@ -3,17 +3,17 @@ import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
 import {Link} from 'react-router-dom';
 import { CartContext} from '../../context/CartContext';
-import products from "../asyncMock";
 
-const ItemDetail = ({name, img, description, price, stock}) => {
+const ItemDetail = ({id, name, img, description, price, stock}) => {
     const [quantityAdded, setQuantityAdded] = useState('')
     const {addItem} = useContext(CartContext)
   
 
     const onAdd = (quantity) => {
         console.log(`Agregaste ${quantity} productos al carrito`)
+        const item = {id, name, img, description, price, stock}
         setQuantityAdded(quantity)
-        addItem(products, quantity)
+        addItem(item, quantity)
     }
 
     return(

@@ -5,8 +5,8 @@ const CartItem = ({ item }) => {
   const {deleteItem}= useContext(CartContext)
 
   return (
-    <div>
-      <img src={item.img} alt={item.name} with={'150rem'}/>
+    <div className="d-flex flex-column align-items-center">
+      <img src={item.img} alt={item.name} with={'10rem'}/>
       <p>{item.name}</p>
       <p>${item.price}</p>
       <p>{item.quantity}</p>

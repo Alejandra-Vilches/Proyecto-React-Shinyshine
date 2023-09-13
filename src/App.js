@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemListContainerProducts from './components/ItemListContainerProducts/ItemListContainerProducts';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function App() {
