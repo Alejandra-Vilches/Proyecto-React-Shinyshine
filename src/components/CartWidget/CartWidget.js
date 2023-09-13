@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import cart from './assets/cart-shopping-solid.svg';
+import { CartContext } from '../../context/CartContext';
+import { Badge } from 'react-bootstrap';
 
 const CartWidget = () => {
+    const {cartQuantity} = useContext(CartContext)
+
     return(
-        <div>
-            <img src={cart} alt="cart-widget" style={{width: '42px', paddingTop: '20px'}}/>
-            0
+
+        <div className=''>
+            <img className='CartImg' src={cart} alt="cart-widget" style={{width: '42px', paddingTop: '20px'}}/>
+            {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
         </div>
     )
 }
 
-export default CartWidget
+export default CartWidget;

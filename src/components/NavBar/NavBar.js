@@ -15,7 +15,7 @@ const NavBar = () => {
                 <NavLink to={'/category/impress'} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}> Uñas Impress</NavLink>
                 
             </div>
-            <CartWidget/>
+            <NavLink style={{textDecoration: 'none'}} to='/cart'><CartWidget/></NavLink>
         </nav>
     )
 }

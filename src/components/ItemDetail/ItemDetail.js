@@ -1,41 +1,32 @@
-import React from "react";
+import React, {useState, useContext} from "react";
+import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import {Link} from 'react-router-dom';
+import { CartContext} from '../../context/CartContext';
+import products from "../asyncMock";
 
-const ItemDetail = ({id, name, img, category, description, price, stock, quantity}) => {
+const ItemDetail = ({name, img, description, price, stock}) => {
+    const [quantityAdded, setQuantityAdded] = useState('')
+    const {addItem} = useContext(CartContext)
+  
+
+    const onAdd = (quantity) => {
+        console.log(`Agregaste ${quantity} productos al carrito`)
+        setQuantityAdded(quantity)
+        addItem(products, quantity)
+    }
+
     return(
-        <article className="CardItem">
-            <header className="Header">
-                <h2 className="ItemHeader">
-                    {name}
-                </h2>
-            </header>
-            <picture>
-                <img src={img} alt={name} className="ItemImg"/>
-            </picture>
-            <section>
-                <p className="Info">
-                    Categoria: {category}
-                </p>
-                <p className="Info">
-                    Descripción: {description}
-                </p>
-                <p className="Info">
-                    Precio: $ {price}
-                </p>
-                <p className="Info">
-                    Id: {id}
-                </p>
-            </section>
-            <footer className="ItemFooter">
-                <ItemListContainer initial={1} stock={stock} onAdd={(quantity) = console.log('Cantidad agregada', quantity)}/>
-            </footer>
-        </article>
+        <div className="d-flex flex-column align-items-center">
+            <h3>Detalle de: {name}</h3>
+            <img src={img} alt={name} className="ItemImg"/>
+            <p>{description}</p>
+            <p>{price}</p>
+            {quantityAdded === '' ? <ItemCount initial={0} stock={stock} onAdd={onAdd}/>
+            : <Link to='/cart' className="btn btn-dark"> Ir al carrito</Link>}
+        </div> 
     )
 }
-
-
-
-      
+   
 
 export default ItemDetail
