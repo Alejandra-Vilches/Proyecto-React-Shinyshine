@@ -1,17 +1,6 @@
 
-const products = [
+export const products = [
     {
-        id:'01',
-        name:'Uñas francesa',
-        price: 11900,
-        category:'impress',
-        img: 'https://imsibeauty.com/wp-content/uploads/2023/07/Diseno-sin-titulo-2023-07-18T174250.984.jpg',
-        stock:8,
-        description:'Uñas press on largo S'
-
-    },
-    {
-        id:'02',
         name:'Uñas San Patrik',
         price: 12900,
         category:'impress',
@@ -21,7 +10,6 @@ const products = [
 
     },
     {
-        id:'03',
         name:'Uñas rosa',
         price: 11900,
         category:'impress',
@@ -31,7 +19,6 @@ const products = [
 
     },
     {
-        id:'04',
         name:'Esponja exfoliante',
         price: 2900,
         category:'skincare',
@@ -41,7 +28,6 @@ const products = [
 
     },
     {
-        id:'05',
         name:'Esponja suave',
         price: 1900,
         category:'skincare',
@@ -51,7 +37,6 @@ const products = [
 
     },
     {
-        id:'06',
         name:'Serum facial',
         price: 21000,
         category:'skincare',
@@ -61,7 +46,6 @@ const products = [
 
     },
     {
-        id:'07',
         name:'Pestañas kiss',
         price: 5000,
         category:'pestanas',
@@ -71,7 +55,6 @@ const products = [
 
     },
     {
-        id:'08',
         name:'Pestañas falsies',
         price: 6000,
         category:'pestanas',
@@ -81,7 +64,6 @@ const products = [
 
     },
     {
-        id:'09',
         name:'Pestañas falscara',
         price: 8000,
         category:'pestanas',
